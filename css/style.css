@@ -1,0 +1,215 @@
+body {
+background: radial-gradient(
+    circle,
+    #B1E8EC 0%,
+    #A5DBE9 25%,
+    #98CFE6 50%,
+    #82B6E0 75%,
+    #6BA2DB 100%
+);
+min-height: 100vh;
+margin: 0;
+}
+
+.fisk {
+width: 500px;
+position: absolute;
+left: 20%;
+top: 40%;
+transform: translate(-50%, -50%);
+z-index: 0;
+}
+
+
+.fisk.hidden {
+width: 200px; 
+left: 150px; 
+top: 70%;
+}
+
+.fisk-gif {
+position: absolute;
+left: 20%;
+top: 40%;
+width: 500px;
+transform: translate(-50%, -50%);
+z-index: 0;
+}
+
+.skjult {
+display: none;
+}
+
+.taleboble-container {
+position: absolute;
+width: 400px;    
+left: 35%;
+top: 20%;
+z-index: 1;
+}
+
+.taleboble {
+width: 300px;    
+height: auto;
+}
+
+.taleboble-tekst {
+position: absolute;
+top: 40%;
+left: 40%;
+transform: translate(-50%, -50%);
+font-size: 20px;  
+font-family: Poppins, sans-serif;
+font-weight: bold;  
+text-align: center;
+width: 200px;      
+}
+/* Footer styling */ 
+
+footer .sandbagerst {
+width: 100%;
+height: auto; 
+max-width: 100%;
+object-fit: contain; 
+position: fixed; 
+bottom: 0; 
+left: 0;
+z-index: -1;
+}
+
+footer .sandforrest {
+width: 100%; 
+height: auto; 
+max-width: 100%; 
+object-fit: contain; 
+position: fixed;
+bottom: 0; 
+left: 0;
+z-index: 1;
+}
+
+footer .tanggroen {
+width: 300px;
+position: fixed;
+left: 20px;
+bottom: 0;
+z-index: 0;
+pointer-events: none;
+}
+
+footer .tanggroen2 {
+width: 300px;
+position: fixed;
+right: 300px;
+bottom: 0;
+z-index: 0;
+pointer-events: none;
+}
+
+footer .tanggroen4 {
+width: 300px;
+position: fixed;
+right: 50%;
+bottom: 0;
+z-index: 0;
+pointer-events: none;
+}
+
+footer .tanggroen3 {
+width: 300px;
+position: fixed;
+right: 30px;
+bottom: 0;
+z-index: 0;
+pointer-events: none;
+}
+
+footer .tanglilla{
+width: 300px;
+position: fixed;
+right: 200px;
+bottom: 10px;
+z-index: 2;
+pointer-events: none;
+}
+
+footer .tanglilla2{
+width: 300px;
+position: fixed;
+bottom: 80px;
+left: 20px;
+z-index: 2;
+pointer-events: none;
+}
+
+footer .tanggul{
+width: 300px;
+position: fixed;
+left: 200px;
+bottom: 20px;
+z-index: 0;
+pointer-events: none;
+}
+
+footer .tanggul2{
+width: 300px;
+position: fixed;
+left: 50%;
+bottom: 20px;
+z-index: 0;
+pointer-events: none;
+}
+
+footer .sten {
+width: 200px;
+position: fixed;
+left: 150px;
+bottom: 50px;
+z-index: 3;  
+}
+
+footer .sten2 {
+width: 200px;
+position: fixed;
+right: 200px;
+bottom: 0;
+z-index: 3;  
+}
+
+footer .krabbe{
+width: 100px;
+position: fixed;
+left: 700px;
+bottom: 60px; 
+z-index: 2;
+}
+
+
+
+/* Når spillet, begynder vil der komme et overlay over skærmen, så man ikke kan se hvor fisken gemmer sig */
+
+.overlay {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: radial-gradient(
+circle,
+#B1E8EC 0%,
+#A5DBE9 25%,
+#98CFE6 50%,
+#82B6E0 75%,
+#6BA2DB 100%
+);
+min-height: 100vh;
+margin: 0;
+opacity: 0;
+pointer-events: none;
+transition: opacity 1s ease;
+z-index: 100;
+}
+
+.overlay.active {
+    opacity: 1;
+}
