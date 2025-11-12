@@ -1,3 +1,5 @@
+
+
 body {
 background: radial-gradient(
     circle,
@@ -20,12 +22,20 @@ transform: translate(-50%, -50%);
 z-index: 0;
 }
 
+.boblerfisk {
+width: 70px;
+position: absolute;
+left: 600px;
+top: 300px;
+transform: translate(-50%, -50%);
+z-index: 0;
+}
 
-.fisk.hidden {
+.fisk.hidden { /*Jeg bruger "hidden", da jeg allerede bruger selectoren "skjult"*/
 width: 200px; 
 left: 150px; 
 top: 70%;
-}
+} 
 
 .fisk-gif {
 position: absolute;
@@ -34,10 +44,39 @@ top: 40%;
 width: 500px;
 transform: translate(-50%, -50%);
 z-index: 0;
+cursor: pointer;
 }
 
-.skjult {
+.fisk-gif2 {
+position: absolute;
+left: 20%;
+top: 40%;
+width: 500px;
+transform: translate(-50%, -50%);
+z-index: 0;
+cursor: pointer;
+}
+
+.skjult { /* Dette bliver brugt, til når jeg skifter imellem talende fisk og alm. fisk*/
 display: none;
+}
+
+.tilbagebtn{ /* Min tilbage knap, jeg har placeret nede i venstre hjørne */
+  position: fixed;
+  bottom: 16px;
+  left: 16px;
+  border: none;
+  background: transparent;
+  padding: 8px;
+  cursor: pointer;
+  z-index: 20;
+}
+
+
+.tilbagebtn img{
+  display: block;
+  width: 80px;
+  height: auto;
 }
 
 .taleboble-container {
@@ -182,9 +221,35 @@ position: fixed;
 left: 700px;
 bottom: 60px; 
 z-index: 2;
+animation: krabbe-sway 3s ease-in-out infinite;
+transform-origin: center;
 }
 
+footer .boblerkrabbe {
+width: 50px;
+position: fixed;
+left: 720px;
+bottom: 130px; 
+z-index: 2;
+}
 
+@keyframes krabbe-sway {
+      0% {
+    transform: translateX(0) translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateX(20px) translateY(-4px) rotate(-6deg);
+  }
+  50% {
+    transform: translateX(40px) translateY(0) rotate(0deg);
+  }
+  75% {
+    transform: translateX(20px) translateY(-4px) rotate(6deg);
+  }
+  100% {
+    transform: translateX(0) translateY(0) rotate(0deg);
+  }
+}
 
 /* Når spillet, begynder vil der komme et overlay over skærmen, så man ikke kan se hvor fisken gemmer sig */
 
@@ -213,3 +278,54 @@ z-index: 100;
 .overlay.active {
     opacity: 1;
 }
+
+/* Slut side */
+
+.slutoverlay {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: radial-gradient(
+circle,
+#B1E8EC 0%,
+#A5DBE9 25%,
+#98CFE6 50%,
+#82B6E0 75%,
+#6BA2DB 100%
+);
+min-height: 100vh;
+margin: 0;
+opacity: 0;
+pointer-events: none;
+transition: opacity 1s ease;
+z-index: 100;
+
+display: flex;
+flex-direction: column; 
+align-items: center;
+justify-content: center;   /*Dette får indholdet (altså paragrafen) til at blive centreret*/
+padding: 2rem;
+box-sizing: border-box;
+}
+
+.slutoverlay.active {
+    opacity: 1;
+}
+
+.slutparagraf {
+  font-family: Poppins;
+  font-weight: bold;
+  font-size: 100px;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+}
+
+.slutbtn{
+  width: 200px;
+  cursor: pointer;      
+  pointer-events: auto;  
+}
+
+

@@ -4,20 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Find Fisken</title>
+    <link href="https://fonts.googleapis.com/css2?family=Krona+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <main>
-        
-    <div class="overlay"></div>
+    <!-- Overlay, dette fylder skærmen imens fisken gemmer sig -->
+    <div class="overlay">
+    </div>
+    <!-- Slut Overlay, dette bliver brugt når spillet er slut, og vi gerne vil viderestille brugers til startskærmen, for at prøve de andre spil. -->
+    <div class="slutoverlay">
+        <p class="slutparagraf">Udforsk vores andre spil!</p>
+        <img src="img/tilbage-pil.png" class="slutbtn" alt="Tilbage">
+    </div>
+    <!-- Mine fisk, både den almindelige, men også den talende fisk -->
     <img src="img/Sejlfinnet Kirurg.png" class="fisk" alt="Sejlfinnet Kirurg">
     <img src="img/Sejlfinnet-Kirurg.gif" class="fisk-gif skjult" id="giffisk" alt="Fisk GIF">
+    <img src="img/Sejlfinnet-Kirurg.gif" class="fisk-gif2" id="giffisk2" alt="Fisk GIF">
+    <img src="img/bobler-flere.gif" class="boblerfisk" alt="Levende bobler">
 
+    <!-- Her er min taleboble placeret -->
     <div class="taleboble-container">
         <img src="img/Talebobbel.png" class="taleboble" alt="Talebobbel">
         <p class="taleboble-tekst"></p>
     </div>
-
+    <!-- Min tilbageknap, som er placeret inde på selve spillet, så man ikke er tvunget ti at spille spillet færdigt. -->
+    <div>
+      <button class="tilbagebtn">
+      <img src="img/tilbage-pil.png" alt="Tilbage">
+    </button>
+    </div>
+    
     </main>
 <footer>
     <!-- alt dette bliver brugt som baggrundsbillede -->
@@ -34,6 +51,7 @@
     <img src="img/Sten.png" class="sten" alt="Sten">
     <img src="img/Sten.png" class="sten2" alt="Sten">
     <img src="img/Krabbe.png" class="krabbe" alt="Krabbe">
+    <img src="img/bobler-flere.gif" class="boblerkrabbe"  alt="Levende bobler">
 </footer>
 <script src="js/script.js"></script>
 </body>
